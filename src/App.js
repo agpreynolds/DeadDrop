@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './styles/App.css';
 import PlayerSelection from './PlayerSelection';
 import DifficultySelection from './DifficultySelection';
 import Feedback from './Feedback';
