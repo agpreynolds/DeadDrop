@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './styles/App.css';
-import PlayerSelection from './PlayerSelection';
-import DifficultySelection from './DifficultySelection';
+import TimerSetup from './TimerSetup';
 import Feedback from './Feedback';
 
 class App extends Component {
@@ -12,8 +11,7 @@ class App extends Component {
           <h1 className="App-title">Dead Drop</h1>
         </header>
         
-          <PlayerSelection></PlayerSelection>
-          <DifficultySelection></DifficultySelection>       
+          <TimerSetup></TimerSetup>       
           <Feedback></Feedback>
       </div>
     );
