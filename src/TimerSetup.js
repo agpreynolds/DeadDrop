@@ -45,6 +45,7 @@ class TimerSetup extends Component {
             case 1:
                 return (
                     <DifficultySelection
+                        noOfPlayers={this.state.noOfPlayers}
                         difficulty={this.state.difficulty}
                         onSelectionChanged={this.handleDifficultySelectionChanged}
                         onPrevious={this.handleBackButtonClicked}
