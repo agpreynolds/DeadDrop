@@ -9,6 +9,7 @@ class TimerSetup extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+            activeStep: 0,
             noOfPlayers: 2,
             difficulty: 1
         };
@@ -22,20 +23,42 @@ class TimerSetup extends Component {
         this.setState({ difficulty: difficulty });
     }
 
+    handleBackButtonClicked = () => {
+        this.setState({ activeStep: this.state.activeStep - 1 });
+    }
+
+    handleNextButtonClicked = () => {
+        this.setState({ activeStep: this.state.activeStep  + 1 });
+    }
+
     render() {
-        return (
-            <div>
-                <PlayerSelection
-                    noOfPlayers={this.state.noOfPlayers}
-                    onSelectionChanged={this.handlePlayerSelectionChanged} />
-                <DifficultySelection
-                    difficulty={this.state.difficulty}
-                    onSelectionChanged={this.handleDifficultySelectionChanged} />
-                <Summary 
-                    noOfPlayers={this.state.noOfPlayers}
-                    difficulty={this.state.difficulty} />
-            </div>
-        );
+        const activeStep = this.state.activeStep
+
+        switch (activeStep) {
+            case 0:
+                return (
+                    <PlayerSelection
+                        noOfPlayers={this.state.noOfPlayers}
+                        onSelectionChanged={this.handlePlayerSelectionChanged}
+                        onNext={this.handleNextButtonClicked} />
+                );
+            case 1:
+                return (
+                    <DifficultySelection
+                        difficulty={this.state.difficulty}
+                        onSelectionChanged={this.handleDifficultySelectionChanged}
+                        onPrevious={this.handleBackButtonClicked}
+                        onNext={this.handleNextButtonClicked} />
+                );
+            case 2:
+                return (
+                    <Summary 
+                        noOfPlayers={this.state.noOfPlayers}
+                        difficulty={this.state.difficulty} />
+                );
+            default:
+                return null;
+        }        
     }
 }
 
