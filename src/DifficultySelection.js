@@ -1,19 +1,11 @@
 import React, { Component } from 'react';
 
+import { getTimerLength } from './logic/SetupRules';
+
 class DifficultySelection extends Component {
     
-    getTimerLength = (difficulty) => {
-        if (difficulty === 2) {
-            return this.props.noOfPlayers * 4;
-        } else if (difficulty === 1) {
-            return this.props.noOfPlayers * 5;
-        } else {
-            return 0;
-        }
-    }
-
     getTimerListItem = (difficulty) => {
-        const length = this.getTimerLength(difficulty);
+        const length = getTimerLength(difficulty, this.props.noOfPlayers);
         let text;
         if (length > 0) {
             text = `${length} minute timer`;

@@ -18,7 +18,7 @@ class Summary extends Component {
 
             <h2>To Set Up</h2>
 
-            <button>Play</button>
+            <button onClick={this.props.onNext}>Play</button>
         </div>
     );
   }

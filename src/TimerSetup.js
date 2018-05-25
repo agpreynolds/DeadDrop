@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import PlayerSelection from './PlayerSelection';
 import DifficultySelection from './DifficultySelection';
 import Summary from './Summary';
+import Timer from './Timer';
+
+import { getTimerLength } from './logic/SetupRules';
 
 class TimerSetup extends Component {
     
@@ -11,7 +14,8 @@ class TimerSetup extends Component {
         this.state = { 
             activeStep: 0,
             noOfPlayers: 2,
-            difficulty: 1
+            difficulty: 1,
+            timerLength: 10 //TODO[AR]: What's the default here?
         };
     }
 
@@ -20,7 +24,10 @@ class TimerSetup extends Component {
     }
 
     handleDifficultySelectionChanged = (difficulty) => {
-        this.setState({ difficulty: difficulty });
+        this.setState({ 
+            difficulty: difficulty,
+            timerLength: getTimerLength(difficulty, this.state.noOfPlayers)
+        });
     }
 
     handleBackButtonClicked = () => {
@@ -55,7 +62,12 @@ class TimerSetup extends Component {
                 return (
                     <Summary 
                         noOfPlayers={this.state.noOfPlayers}
-                        difficulty={this.state.difficulty} />
+                        difficulty={this.state.difficulty}
+                        onNext={this.handleNextButtonClicked} />
+                );
+            case 3:
+                return (
+                    <Timer timerLength={this.state.timerLength} />
                 );
             default:
                 return null;
