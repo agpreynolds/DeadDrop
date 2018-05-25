@@ -86,6 +86,9 @@ input[type="submit"] {
   width: 100%;
   padding: 10px 16px;
   margin-bottom: 1.76rem; }
+  input:hover,
+  .button:hover,
+  button:hover,
   input:focus, .button:focus,
   button:focus {
     outline: none; }
@@ -141,6 +144,17 @@ input[type="submit"] {
   input[type="submit"]:focus {
     box-shadow: 0 0 0 0 #a10e12;
     top: 5px; }
+
+.button.button--small,
+a.button.button--small,
+button.button--small,
+[type="button"].button--small.button,
+button[type="button"].button--small,
+input[type="button"].button--small,
+[type="submit"].button--small.button,
+button[type="submit"].button--small,
+input[type="submit"].button--small {
+  padding: 5px 60px; }
 
 #root {
   max-width: 670px;
