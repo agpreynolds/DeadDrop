@@ -156,6 +156,14 @@ button[type="submit"].button--small,
 input[type="submit"].button--small {
   padding: 5px 60px; }
 
+.panel {
+  padding: 20px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+  margin-bottom: 3.52rem;
+  box-shadow: 0 5px 0 0 #d1d3d4; }
+
 #root {
   max-width: 670px;
   padding: 20px;
@@ -164,3 +172,20 @@ input[type="submit"].button--small {
 .subscribe-form {
   text-align: left;
   padding: 3.52rem 70px; }
+
+.difficulty-select {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 20px; }
+
+.difficulty {
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  -webkit-transition: top 0.2s ease-in-out 0s;
+  -moz-transition: top 0.2s ease-in-out 0s;
+  -o-transition: top 0.2s ease-in-out 0s;
+  transition: top 0.2s ease-in-out 0s; }
+  .difficulty:hover,
+  .difficulty.selected {
+    top: -10px; }

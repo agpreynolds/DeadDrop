@@ -27,30 +27,35 @@ class DifficultySelection extends Component {
     render() {
         return (
             <div>
-                <h2>Difficulty</h2>
-                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged(0)}>
-                    <h2>Easy</h2>
-                    <ul>
-                        {this.getTimerListItem(0)}
-                        <li>Fewer Lethal Cards</li>
-                        <li>No jokers</li>
-                    </ul>
-                </div>
-                <div className="panel difficulty difficulty--normal" onClick={() => this.props.onSelectionChanged(1)}>
-                    <h2>Normal</h2>
-                    <ul>
-                        {this.getTimerListItem(1)}
-                        <li>Some Lethal Cards</li>
-                    </ul>
-                </div>
-                <div className="panel difficulty difficulty--hard" onClick={() => this.props.onSelectionChanged(2)}>
-                    <h2>Hard</h2>
-                    <ul>
-                        {this.getTimerListItem(2)}
-                        <li>More Lethal Cards</li>
-                    </ul>
-                </div>
-
+                <h2>Difficulty selection</h2>
+                
+                <div className="difficulty-select">
+	                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged(0)}>
+	                    <h2>Easy</h2>
+	                    <ul>
+	                        {this.getTimerListItem(0)}
+	                        <li>Fewer Lethal Cards</li>
+	                        <li>No jokers</li>
+	                    </ul>
+	                </div>
+	                
+	                <div className="panel difficulty difficulty--normal" onClick={() => this.props.onSelectionChanged(1)}>
+	                    <h2>Normal</h2>
+	                    <ul>
+	                        {this.getTimerListItem(1)}
+	                        <li>Some Lethal Cards</li>
+	                    </ul>
+	                </div>
+	                
+	                <div className="panel difficulty difficulty--hard" onClick={() => this.props.onSelectionChanged(2)}>
+	                    <h2>Hard</h2>
+	                    <ul>
+	                        {this.getTimerListItem(2)}
+	                        <li>More Lethal Cards</li>
+	                    </ul>
+	                </div>
+				</div>
+				
                 <button onClick={this.props.onBack}>Previous</button>
                 <button onClick={this.props.onNext}>Next</button>
             </div>
