@@ -10,6 +10,18 @@ input{
 	display: block;
 	width: 100%;
 	padding: 10px 16px;
+	margin-bottom: $text-spacing-half;
+	
+	&:focus{
+		outline: none;
+	}
+}
+
+input[type="checkbox"],
+input[type="radio"]{
+	display: inline-block;
+	width: auto;
+	margin: 0;
 }
 
 input[type="checkbox"]{
@@ -18,4 +30,8 @@ input[type="checkbox"]{
 
 input[type="radio"]{
 	-webkit-appearance: radio;
+}
+
+input[type="number"]{
+	text-align: center;
 }

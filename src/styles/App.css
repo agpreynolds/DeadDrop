@@ -69,7 +69,11 @@ small, .small {
 label {
   font-size: 2.5rem; }
 
-input {
+input, .button,
+a.button,
+button,
+input[type="button"],
+input[type="submit"] {
   -webkit-appearance: none;
   border-radius: 10px;
   border: 0;
@@ -80,13 +84,63 @@ input {
   font-weight: 700;
   display: block;
   width: 100%;
-  padding: 10px 16px; }
+  padding: 10px 16px;
+  margin-bottom: 1.76rem; }
+  input:focus, .button:focus,
+  button:focus {
+    outline: none; }
 
-input[type="checkbox"] {
+input[type="checkbox"],
+[type="checkbox"].button,
+button[type="checkbox"],
+input[type="radio"], [type="radio"].button,
+button[type="radio"] {
+  display: inline-block;
+  width: auto;
+  margin: 0; }
+
+input[type="checkbox"], [type="checkbox"].button,
+button[type="checkbox"] {
   -webkit-appearance: checkbox; }
 
-input[type="radio"] {
+input[type="radio"], [type="radio"].button,
+button[type="radio"] {
   -webkit-appearance: radio; }
+
+input[type="number"], [type="number"].button,
+button[type="number"] {
+  text-align: center; }
+
+.button,
+a.button,
+button,
+[type="button"].button,
+button[type="button"],
+input[type="button"],
+[type="submit"].button,
+button[type="submit"],
+input[type="submit"] {
+  width: auto;
+  display: inline-block;
+  padding: 10px 30px;
+  background: #ed1c24;
+  color: #fff;
+  font-family: "Yanone Kaffeesatz", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 5px 0 0 #a10e12;
+  position: relative; }
+  .button:focus,
+  a.button:focus,
+  button:focus,
+  [type="button"].button:focus,
+  button[type="button"]:focus,
+  input[type="button"]:focus,
+  [type="submit"].button:focus,
+  button[type="submit"]:focus,
+  input[type="submit"]:focus {
+    box-shadow: 0 0 0 0 #a10e12;
+    top: 5px; }
 
 #root {
   max-width: 670px;

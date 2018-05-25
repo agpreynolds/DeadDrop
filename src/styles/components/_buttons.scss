@@ -1,0 +1,30 @@
+.button,
+a.button,
+button,
+input[type="button"],
+input[type="submit"]{
+	@extend input;
+	width: auto;
+	display: inline-block;
+	padding: 10px 30px;
+	background: $red;
+	color: #fff;
+	font-family: $yanone-font-stack;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	box-shadow: 0 5px 0 0 $red-dark;
+	position: relative;
+	
+	&:focus{
+		box-shadow: 0 0 0 0 $red-dark;
+		top: 5px;
+	}
+}
+
+.button.button--small,
+a.button.button--small,
+button.button--small,
+input[type="button"].button--small,
+input[type="submit"].button--small{
+	
+}
