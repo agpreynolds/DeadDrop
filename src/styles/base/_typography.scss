@@ -8,7 +8,7 @@ $yanone-font-stack: "Yanone Kaffeesatz", "Raleway", "Helvetica Neue", Helvetica,
 $obritron-font-stack: "Orbitron", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $base-font-size: 2.2rem;
-$small-font-size:  1.6rem;
+$small-font-size:  1.7rem;
 $leading: 1.6;
 
 $bold: 700;
@@ -30,6 +30,7 @@ body{
 	line-height: $leading;
 	color: $text-color;
 	background-color: $background-color;
+	text-align: center;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -39,6 +40,24 @@ h1,h2,h3,p,ul,ol,form,table,blockquote{
 	margin-bottom: $text-spacing;
 }
 
+h1,h2,h3,h4,h5,h6,th,label{
+	font-family: $yanone-font-stack;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
 strong,b{
 	font-weight: $bold;
+}
+
+.sans{
+	font-family: $raleway-font-stack;
+}
+
+small, .small{
+	font-size: $small-font-size;
+}
+
+label{	
+	font-size: 2.5rem;	
 }

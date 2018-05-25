@@ -1,0 +1,21 @@
+input{
+	-webkit-appearance: none;
+	border-radius: 10px;
+	border: 0;
+	color: #000;
+	font-family: $raleway-font-stack;
+	text-align: left;
+	font-size: 2.1rem;
+	font-weight: $bold;
+	display: block;
+	width: 100%;
+	padding: 10px 16px;
+}
+
+input[type="checkbox"]{
+	-webkit-appearance: checkbox;
+}
+
+input[type="radio"]{
+	-webkit-appearance: radio;
+}
