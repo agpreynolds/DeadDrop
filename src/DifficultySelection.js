@@ -28,7 +28,7 @@ class DifficultySelection extends Component {
         return (
             <div>
                 <h2>Difficulty</h2>
-                <div onClick={() => this.props.onSelectionChanged(0)}>
+                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged(0)}>
                     <h2>Easy</h2>
                     <ul>
                         {this.getTimerListItem(0)}
@@ -36,14 +36,14 @@ class DifficultySelection extends Component {
                         <li>No jokers</li>
                     </ul>
                 </div>
-                <div onClick={() => this.props.onSelectionChanged(1)}>
+                <div className="panel difficulty difficulty--normal" onClick={() => this.props.onSelectionChanged(1)}>
                     <h2>Normal</h2>
                     <ul>
                         {this.getTimerListItem(1)}
                         <li>Some Lethal Cards</li>
                     </ul>
                 </div>
-                <div onClick={() => this.props.onSelectionChanged(2)}>
+                <div className="panel difficulty difficulty--hard" onClick={() => this.props.onSelectionChanged(2)}>
                     <h2>Hard</h2>
                     <ul>
                         {this.getTimerListItem(2)}
