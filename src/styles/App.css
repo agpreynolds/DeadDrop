@@ -243,7 +243,8 @@ input[type="submit"].button--orange {
   border-radius: 10px;
   border: 14px solid #d1d3d4;
   display: grid;
-  grid-template-columns: 10fr 1fr 10fr; }
+  grid-template-columns: 10fr 1fr 10fr;
+  box-shadow: inset 0px 0px 13px 4px rgba(0, 0, 0, 0.4); }
   .timer-countdown span {
     display: inline-block;
     position: relative;
