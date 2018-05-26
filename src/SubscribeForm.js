@@ -4,7 +4,7 @@ class SubscribeForm extends Component {
   render() {
     return (	    
         <div className="subscribe">
-	        	<p className="subscribe-info">Dead Drop is a fun, competitive card game currently in developement. Sign up for the newlsetter to be a part of the story and to be the first to know about backer only discounts!</p>
+	        	<p className="subscribe-info">Dead Drop is a fun, competitive card game currently in development. Sign up for the newsletter to be a part of the story and to be the first to know about backer only discounts!</p>
 			
 			<hr />
 			
