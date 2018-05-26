@@ -13,7 +13,7 @@ class Subscribe extends Component {
 		        
 		        <div className="input-group input-group--email">
 		        		<input type="email" name="email" />
-					<button type="submit" value="submit" aria-label="Submit" className="input-group__button"></button>
+					<button type="submit" value="submit" aria-label="Submit" className="button button--white input-group__button"></button>
 				</div>
 				
 				<p className="update-info sans small">Updates are every 4–6 weeks and will cover the processes of development, funding and manufacture for this game!</p>

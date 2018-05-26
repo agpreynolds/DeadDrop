@@ -60,3 +60,51 @@ input[type="submit"].button--orange{
 	background: $orange;
 	box-shadow: 0 5px 0 0 $orange-dark;
 }
+
+.button.button--white,
+a.button.button--white,
+button.button--white,
+input[type="button"].button--white,
+input[type="submit"].button--white{
+	background: #fff;
+	box-shadow: 0 5px 0 0 $light-grey;
+}
+
+// Input groups
+.input-group{
+	position: relative;
+	overflow: hidden;
+	
+	input[type="text"],
+	input[type="email"]{
+		padding-right: 72px;
+	}
+		
+	button,
+	.button{
+		position: absolute;
+		right: 0;
+		top: 0;
+		border: 0;
+		box-shadow: none !important;
+		border-radius: 0 $border-radius $border-radius 0;
+		@include single-transition( background, 0.3s, ease-in-out, 0s );
+		cursor: pointer;		
+				
+		&:hover,
+		&:focus{
+			top: 0;
+			background-color: #ddd;
+		}	
+		
+		&:before{
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 5%;
+			height: 90%;
+			width: 2px;
+			background: linear-gradient( to bottom, #ffffff 0%, #000000 20%, #000000 80%, #ffffff 100% );
+		}
+	}
+}

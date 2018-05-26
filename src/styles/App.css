@@ -215,6 +215,55 @@ input[type="submit"].button--orange {
   background: #ff8417;
   box-shadow: 0 5px 0 0 #9c4900; }
 
+.button.button--white,
+a.button.button--white,
+button.button--white,
+[type="button"].button--white.button,
+button[type="button"].button--white,
+input[type="button"].button--white,
+[type="submit"].button--white.button,
+button[type="submit"].button--white,
+input[type="submit"].button--white {
+  background: #fff;
+  box-shadow: 0 5px 0 0 #d1d3d4; }
+
+.input-group {
+  position: relative;
+  overflow: hidden; }
+  .input-group input[type="text"],
+  .input-group [type="text"].button,
+  .input-group button[type="text"],
+  .input-group input[type="email"], .input-group [type="email"].button, .input-group button[type="email"] {
+    padding-right: 72px; }
+  .input-group button,
+  .input-group .button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: 0;
+    box-shadow: none !important;
+    border-radius: 0 10px 10px 0;
+    -webkit-transition: background 0.3s ease-in-out 0s;
+    -moz-transition: background 0.3s ease-in-out 0s;
+    -o-transition: background 0.3s ease-in-out 0s;
+    transition: background 0.3s ease-in-out 0s;
+    cursor: pointer; }
+    .input-group button:hover,
+    .input-group button:focus,
+    .input-group .button:hover,
+    .input-group .button:focus {
+      top: 0;
+      background-color: #ddd; }
+    .input-group button:before,
+    .input-group .button:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 5%;
+      height: 90%;
+      width: 2px;
+      background: linear-gradient(to bottom, #ffffff 0%, #000000 20%, #000000 80%, #ffffff 100%); }
+
 .panel {
   padding: 20px;
   background-color: #fff;
@@ -250,6 +299,7 @@ input[type="submit"].button--orange {
     top: -10px; }
 
 .timer-countdown {
+  margin-top: 175px;
   font-family: "Orbitron", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
   font-size: 12.4rem;
