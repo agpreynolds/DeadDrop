@@ -321,7 +321,7 @@ input[type="submit"].button--white {
 
 @media (min-width: 600px) {
   .intro-header {
-    top: 70px; }
+    top: 80px; }
   .intro-header__subtitle {
     font-size: 3.2rem; }
   .intro-header__title {
