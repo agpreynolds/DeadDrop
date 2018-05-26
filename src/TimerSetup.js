@@ -4,6 +4,7 @@ import PlayerSelection from './PlayerSelection';
 import DifficultySelection from './DifficultySelection';
 import Summary from './Summary';
 import Timer from './Timer';
+import GameWon from './GameWon';
 import GameLost from './GameLost';
 
 import { getTimerLength } from './logic/SetupRules';
@@ -42,6 +43,10 @@ class TimerSetup extends Component {
     handlePlayAgainClicked = () => {
         this.setState({ activeStep: 0 });
     }
+
+    handleGameWon = () => {
+        this.setState({ activeStep: 4 });
+    }
     
     handleGameLost = () => {
         this.setState({ activeStep: 5 });
@@ -78,8 +83,12 @@ class TimerSetup extends Component {
                 return (
                     <Timer 
                         timerLength={this.state.timerLength}
+                        onGameWon={this.handleGameWon}
                         onGameLost={this.handleGameLost} />
                 );
+            case 4:
+                return <GameWon
+                    onPlayAgainClicked={this.handlePlayAgainClicked} />;
             case 5:
                 return <GameLost
                     onPlayAgainClicked={this.handlePlayAgainClicked} />;

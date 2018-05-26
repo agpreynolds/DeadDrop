@@ -64,7 +64,7 @@ class Timer extends Component {
 	            			<button className="button button--orange" aria-label="Delay"></button>
 	            		</li>
 	            		<li className="timer-control timer-control--disarm">
-	            			<button className="button button--large button--green">Disarm</button>
+	            			<button className="button button--large button--green" onClick={this.props.onGameWon}>Disarm</button>
 	            		</li>
 	            </ul>	            
 	        </div>

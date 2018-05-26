@@ -4,8 +4,8 @@ class GameLost extends Component {
   render() {
     return (
         <div>
-            <h2>Everyone is dead!</h2>
-            <p>Wow! That took a turn for the worst. Looks like it's time for you to claim the next victory!</p>
+            <h2>Congratulations!</h2>
+            <p>You won! Do you think you can keep the victories coming?</p>
             <button onClick={this.props.onPlayAgainClicked}>Play Again</button>
         </div>
     );
