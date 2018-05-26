@@ -44,6 +44,7 @@ class Timer extends Component {
         // Check if we're at zero.
         if (seconds == 0) { 
             clearInterval(this.timer);
+            this.props.onGameLost();
         }
     }
 
@@ -57,7 +58,7 @@ class Timer extends Component {
             		</p>
 	            <ul className="timer-controls">
 	            		<li className="timer-control timer-control--explode">
-	            			<button className="button">Explode</button>
+	            			<button className="button" onClick={this.props.onGameLost}>Explode</button>
 	            		</li>
 	            		<li className="timer-control timer-control--delay">
 	            			<button className="button button--orange" aria-label="Delay"></button>
