@@ -132,7 +132,9 @@ input[type="submit"] {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   box-shadow: 0 5px 0 0 #a10e12;
-  position: relative; }
+  position: relative;
+  text-align: center;
+  min-height: 45px; }
   .button:focus,
   a.button:focus,
   button:focus,
@@ -228,3 +230,34 @@ input[type="submit"].button--orange {
   .difficulty:hover,
   .difficulty.selected {
     top: -10px; }
+
+.timer-countdown {
+  font-family: "Orbitron", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  font-size: 12.4rem;
+  line-height: 1;
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  border: 14px solid #d1d3d4;
+  display: grid;
+  grid-template-columns: 10fr 1fr 10fr; }
+  .timer-countdown span {
+    display: inline-block;
+    position: relative;
+    top: 12px;
+    left: -4px;
+    text-align: center; }
+
+.timer-controls {
+  display: grid;
+  grid-template-columns: 2fr 1fr 4fr;
+  grid-column-gap: 20px; }
+  .timer-controls button {
+    width: 100%; }
+  .timer-controls .timer-control--explode button,
+  .timer-controls .timer-control--delay button {
+    font-size: 3rem;
+    min-height: 56px; }
