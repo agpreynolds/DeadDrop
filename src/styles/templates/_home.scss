@@ -1,5 +1,50 @@
+// Intro
+.intro{
+	position: relative;
+	top: -20px;
+}
+
+.intro-header{
+	margin: 0;
+	position: absolute;
+	top: 25px;
+	left: auto;
+	right: auto;
+	text-align: center;
+	width: 100%;
+}
+
+.intro-header__subtitle{
+	font-size: 2.4rem;
+	display: inline-block;
+	margin-bottom: 0.25em;
+}
+
+.intro-header__title{
+	font-size: 7rem;
+	line-height: 0.75em;
+	font-weight: $bold;
+}
+
+@include desktop-media {	
+	.intro-header{
+		top: 50px;
+	}
+	
+	.intro-header__subtitle{
+		font-size: 3.2rem;
+	}
+	
+	.intro-header__title{
+		font-size: 14rem;
+	}	
+}
+
 // Subscribe form
 .subscribe-form{
 	text-align: left;
-	padding: $text-spacing $desktop-column-padding;
+	
+	@include desktop-media {	
+		padding: 0 $desktop-column-padding;
+	}
 }
