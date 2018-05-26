@@ -89,6 +89,9 @@ hr {
   margin: 3.52rem 0;
   background: linear-gradient(to right, #000 0%, #fff 20%, #fff 80%, #000 100%); }
 
+.hidden {
+  display: none; }
+
 ::selection {
   background: #ed1c24;
   color: #fff;

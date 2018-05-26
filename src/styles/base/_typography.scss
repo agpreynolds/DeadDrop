@@ -79,6 +79,11 @@ hr{
 	background: linear-gradient(to right, #000 0%, #fff 20%, #fff 80%, #000 100% ); 
 }
 
+// Utilities
+.hidden{
+	display: none;
+}
+
 // Selection colour
 ::selection {
 	background: $red;
