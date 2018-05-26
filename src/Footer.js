@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Feedback extends Component {
+class Footer extends Component {
   render() {
     return (
         <p>Feedback Email | Twitter</p>
@@ -8,4 +8,4 @@ class Feedback extends Component {
   }
 }
 
-export default Feedback;
+export default Footer;

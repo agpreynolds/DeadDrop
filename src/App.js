@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './styles/App.css';
 import TimerSetup from './TimerSetup';
 import Subscribe from './Subscribe';
-import Feedback from './Feedback';
+import Footer from './Footer';
 
 class App extends Component {
   render() {
@@ -21,7 +21,7 @@ class App extends Component {
             </div>
           </Router>         
           
-          <Feedback></Feedback>
+          <Footer></Footer>
       </div>
     );
   }
