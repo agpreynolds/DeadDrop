@@ -8,6 +8,7 @@ $yanone-font-stack: "Yanone Kaffeesatz", "Raleway", "Helvetica Neue", Helvetica,
 $orbitron-font-stack: "Orbitron", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $base-font-size: 2.2rem;
+$base-font-size-mobile: 1.9rem;
 $small-font-size:  1.7rem;
 $leading: 1.6;
 
@@ -34,6 +35,11 @@ body{
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    
+    @include mobile-media {	
+	    font-size: $base-font-size-mobile;
+	    line-height: 1.5;
+    }
 }
 
 h1,h2,h3,p,ul,ol,form,table,blockquote{

@@ -13,6 +13,7 @@ $light-grey: #d1d3d4;
 
 // Layout
 $breakpoint: 600px;
+$breakpoint-max: $breakpoint - 1;
 $container-max-width: 630px;
 $desktop-column-padding: 70px;
 $border-radius: 10px;
@@ -20,6 +21,12 @@ $border-radius: 10px;
 // Media query mixin
 @mixin desktop-media {
 	@media ( min-width: $breakpoint ) {
+		@content;
+	}
+}
+
+@mixin mobile-media {
+	@media ( max-width: $breakpoint-max ) {
 		@content;
 	}
 }

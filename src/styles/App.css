@@ -48,6 +48,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility; }
+  @media (max-width: 599px) {
+    body {
+      font-size: 1.9rem;
+      line-height: 1.5; } }
 
 h1, h2, h3, p, ul, ol, form, table, blockquote {
   margin-bottom: 3.52rem; }
@@ -119,9 +123,6 @@ input[type="submit"] {
   width: 100%;
   padding: 10px 16px;
   margin-bottom: 1.76rem; }
-  input:hover,
-  .button:hover,
-  button:hover,
   input:focus, .button:focus,
   button:focus {
     outline: none; }
@@ -167,7 +168,8 @@ input[type="submit"] {
   box-shadow: 0 5px 0 0 #a10e12;
   position: relative;
   text-align: center;
-  min-height: 45px; }
+  min-height: 45px;
+  cursor: pointer; }
   .button:focus,
   a.button:focus,
   button:focus,
@@ -333,22 +335,40 @@ input[type="submit"].button--white {
     .subscribe-form {
       padding: 0 70px; } }
 
-.difficulty-select {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 20px; }
+@media (min-width: 600px) {
+  .difficulty-select {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px; } }
 
 .difficulty {
   position: relative;
   top: 0;
   cursor: pointer;
-  -webkit-transition: top 0.2s ease-in-out 0s;
-  -moz-transition: top 0.2s ease-in-out 0s;
-  -o-transition: top 0.2s ease-in-out 0s;
-  transition: top 0.2s ease-in-out 0s; }
-  .difficulty:hover,
-  .difficulty.selected {
-    top: -10px; }
+  margin-bottom: 3.52rem; }
+  .difficulty h2 {
+    font-size: 3.6rem;
+    font-weight: 700;
+    margin-bottom: 12px; }
+  .difficulty ul {
+    font-size: 1.7rem;
+    line-height: 1.4;
+    margin: 0; }
+  @media (min-width: 600px) {
+    .difficulty {
+      -webkit-transition: top 0.2s ease-in-out 0s;
+      -moz-transition: top 0.2s ease-in-out 0s;
+      -o-transition: top 0.2s ease-in-out 0s;
+      transition: top 0.2s ease-in-out 0s; }
+      .difficulty:hover,
+      .difficulty.selected {
+        top: -10px; }
+      .difficulty h2 {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 1.76rem; }
+      .difficulty ul {
+        margin-bottom: 1.76rem; } }
 
 .timer-countdown {
   margin-top: 175px;
