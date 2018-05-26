@@ -1,15 +1,8 @@
-machine:
-  environment:
-    PATH: "${PATH}:${HOME}/${CIRCLE_PROJECT_REPONAME}/node_modules/.bin"
-  node:
-    version: 7.10.0
-
-dependencies:
-  override:
-    - yarn
-  cache_directories:
-    - ~/.cache/yarn  
-
-test:
-  override:
-    - yarn test
+version: 2
+jobs:
+   build:
+     docker:
+       - image: circleci/<language>:<version TAG>
+     steps:
+       - checkout
+       - run: echo "hello world"
