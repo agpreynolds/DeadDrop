@@ -299,7 +299,7 @@ input[type="submit"].button--white {
 .intro-header {
   margin: 0;
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: auto;
   right: auto;
   text-align: center;
@@ -315,9 +315,13 @@ input[type="submit"].button--white {
   line-height: 0.75em;
   font-weight: 700; }
 
+.intro__illustration {
+  width: 110%;
+  margin-left: -5%; }
+
 @media (min-width: 600px) {
   .intro-header {
-    top: 50px; }
+    top: 70px; }
   .intro-header__subtitle {
     font-size: 3.2rem; }
   .intro-header__title {
