@@ -5,7 +5,7 @@ class Summary extends Component {
     const playerOptions = [2,3,4,5].map((noOfPlayers) => <option>{noOfPlayers}</option>);
     return (
         <div>
-            <h2>Your Game</h2>
+            <h2 className="page-title">Your Game</h2>
 
             <label>Number of Players:</label>
             <select value={this.props.noOfPlayers}>

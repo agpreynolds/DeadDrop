@@ -19,7 +19,7 @@ class DifficultySelection extends Component {
     render() {
         return (
             <div>
-                <h2>Difficulty selection</h2>
+                <h2 className="page-title">Difficulty selection</h2>
                 
                 <div className="difficulty-select">
 	                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged(0)}>

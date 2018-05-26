@@ -9,7 +9,7 @@ class PlayerSelection extends Component {
     render() {
         return (
             <div>
-                <h2>Number of Players</h2>
+                <h2 className="page-title">Number of Players</h2>
                 <input type="number" name="players" value={this.props.noOfPlayers} onChange={this.handleChange}/>
                 <button className="button button--small" onClick={this.props.onNext}>Next</button>
             </div>
