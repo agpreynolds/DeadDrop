@@ -1,6 +1,8 @@
 // Difficulty select
 .difficulty-select{
-	@include desktop-media {	
+	margin-bottom: $text-spacing;
+
+	@include desktop-media {
 		display: grid;
 		grid-template-columns: repeat( 3, 1fr );
 		grid-column-gap: 20px;
@@ -11,34 +13,34 @@
 	position: relative;
 	top: 0;
 	cursor: pointer;
-	margin-bottom: $text-spacing;
-	
+	margin-bottom: 15px;
+
 	h2{
 		font-size: 3.6rem;
 		font-weight: $bold;
 		margin-bottom: 12px;
 	}
-	
-	ul{		
+
+	ul{
 		font-size: $small-font-size;
 		line-height: 1.4;
 		margin: 0;
 	}
-	
-	@include desktop-media {	
+
+	@include desktop-media {
 		@include single-transition( top, 0.2s, ease-in-out, 0s );
-		
+
 		&:hover,
 		&.selected{
 			top: -10px;
 		}
-		
+
 		h2{
 			font-size: 5rem;
 			font-weight: $bold;
 			margin-bottom: $text-spacing-half;
 		}
-		
+
 		ul{
 			margin-bottom: $text-spacing-half;
 		}
@@ -49,7 +51,7 @@
 .timer-countdown{
 	margin-top: 175px;
 	font-family: $orbitron-font-stack;
-	width: 100%;	
+	width: 100%;
 	font-size: 12.4rem;
 	line-height: 1;
 	padding: 30px;
@@ -61,7 +63,7 @@
 	display: grid;
 	grid-template-columns: 10fr 1fr 10fr;
 	box-shadow: inset 0px 0px 13px 4px rgba( 0, 0, 0, 0.4 );
-	
+
 	span{
 		display: inline-block;
 		position: relative;
@@ -69,20 +71,43 @@
 		left: -4px;
 		text-align: center;
 	}
+
+	@include mobile-media {
+		font-size: 7rem;
+
+		span{
+			top: 8px;
+			left: -3px;
+		}
+	}
 }
 
 .timer-controls{
 	display: grid;
 	grid-template-columns: 2fr 1fr 4fr;
 	grid-column-gap: 20px;
-	
+
 	button{
 		width: 100%;
 	}
-	
+
 	.timer-control--explode button,
 	.timer-control--delay button{
 		font-size: 3rem;
 		min-height: 56px;
+	}
+
+	@include mobile-media {
+		grid-column-gap: 15px;
+		grid-template-columns: 2fr 1fr 2.5fr;
+
+		.timer-control button{
+			font-size: 2.2rem;
+			padding: 0;
+		}
+
+		.timer-control--disarm button{
+			font-size: 3.2rem;
+		}
 	}
 }
