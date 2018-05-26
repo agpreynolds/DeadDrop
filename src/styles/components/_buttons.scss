@@ -14,6 +14,8 @@ input[type="submit"]{
 	letter-spacing: 0.05em;
 	box-shadow: 0 5px 0 0 $red-dark;
 	position: relative;
+	text-align: center;
+	min-height: 45px;
 	
 	&:focus{
 		box-shadow: 0 0 0 0 $red-dark;
@@ -27,4 +29,34 @@ button.button--small,
 input[type="button"].button--small,
 input[type="submit"].button--small{
 	padding: 5px 60px;
+	min-height: 35px;
+}
+
+.button.button--large,
+a.button.button--large,
+button.button--large,
+input[type="button"].button--large,
+input[type="submit"].button--large{
+	font-size: 5.5rem;
+	padding: 5px 60px;
+	min-height: 75px;
+}
+
+.button.button--green,
+a.button.button--green,
+button.button--green,
+input[type="button"].button--green,
+input[type="submit"].button--green{
+	background: $green;
+	box-shadow: 0 5px 0 0 $green-dark;
+	color: #000;
+}
+
+.button.button--orange,
+a.button.button--orange,
+button.button--orange,
+input[type="button"].button--orange,
+input[type="submit"].button--orange{
+	background: $orange;
+	box-shadow: 0 5px 0 0 $orange-dark;
 }

@@ -154,7 +154,46 @@ input[type="button"].button--small,
 [type="submit"].button--small.button,
 button[type="submit"].button--small,
 input[type="submit"].button--small {
-  padding: 5px 60px; }
+  padding: 5px 60px;
+  min-height: 35px; }
+
+.button.button--large,
+a.button.button--large,
+button.button--large,
+[type="button"].button--large.button,
+button[type="button"].button--large,
+input[type="button"].button--large,
+[type="submit"].button--large.button,
+button[type="submit"].button--large,
+input[type="submit"].button--large {
+  font-size: 5.5rem;
+  padding: 5px 60px;
+  min-height: 75px; }
+
+.button.button--green,
+a.button.button--green,
+button.button--green,
+[type="button"].button--green.button,
+button[type="button"].button--green,
+input[type="button"].button--green,
+[type="submit"].button--green.button,
+button[type="submit"].button--green,
+input[type="submit"].button--green {
+  background: #72cd10;
+  box-shadow: 0 5px 0 0 #488703;
+  color: #000; }
+
+.button.button--orange,
+a.button.button--orange,
+button.button--orange,
+[type="button"].button--orange.button,
+button[type="button"].button--orange,
+input[type="button"].button--orange,
+[type="submit"].button--orange.button,
+button[type="submit"].button--orange,
+input[type="submit"].button--orange {
+  background: #ff8417;
+  box-shadow: 0 5px 0 0 #9c4900; }
 
 .panel {
   padding: 20px;
