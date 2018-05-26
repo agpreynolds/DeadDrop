@@ -49,7 +49,24 @@ class Timer extends Component {
 
     render() {
         return (
-            <p>{this.state.time.m}:{this.state.time.s}</p>
+            <div className="timer">
+            		<p className="timer-countdown">
+            			<span className="timer-countdown__mins">{this.state.time.m}</span>
+            			<span className="timer-countdown__divider">:</span>
+            			<span className="timer-countdown__secs">{this.state.time.s}</span>
+            		</p>
+	            <ul className="timer-controls">
+	            		<li className="timer-control timer-control--explode">
+	            			<button className="button">Explode</button>
+	            		</li>
+	            		<li className="timer-control timer-control--delay">
+	            			<button className="button button--orange" aria-label="Delay"></button>
+	            		</li>
+	            		<li className="timer-control timer-control--disarm">
+	            			<button className="button button--large button--green">Disarm</button>
+	            		</li>
+	            </ul>	            
+	        </div>
         );
     }
 }
