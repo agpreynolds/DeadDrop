@@ -294,6 +294,13 @@ input[type="submit"].button--white {
   padding: 20px;
   margin: 0 auto; }
 
+.site-footer {
+  margin-top: 5.28rem; }
+
+.logo {
+  width: 100px;
+  height: auto; }
+
 .intro {
   position: relative;
   top: -20px; }
