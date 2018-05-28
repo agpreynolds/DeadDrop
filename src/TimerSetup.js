@@ -16,7 +16,7 @@ class TimerSetup extends Component {
         this.state = { 
             activeStep: 0,
             noOfPlayers: 2,
-            difficulty: 1,
+            difficulty: 'normal',
             timerLength: 10 //TODO[AR]: What's the default here?
         };
     }
@@ -77,6 +77,7 @@ class TimerSetup extends Component {
                     <Summary 
                         noOfPlayers={this.state.noOfPlayers}
                         difficulty={this.state.difficulty}
+                        onPlayerSelectionChanged={this.handlePlayerSelectionChanged}
                         onNext={this.handleNextButtonClicked} />
                 );
             case 3:

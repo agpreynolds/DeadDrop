@@ -28,7 +28,7 @@ class Timer extends Component {
     }    
 
     startTimer() {
-        if (this.timer == 0) {
+        if (this.timer === 0) {
            this.timer = setInterval(this.countDown, 1000);
         }
     }
@@ -42,7 +42,7 @@ class Timer extends Component {
         });
         
         // Check if we're at zero.
-        if (seconds == 0) { 
+        if (seconds === 0) { 
             clearInterval(this.timer);
             this.props.onGameLost();
         }

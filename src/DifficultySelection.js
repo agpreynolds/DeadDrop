@@ -22,27 +22,27 @@ class DifficultySelection extends Component {
                 <h2 className="page-title">Difficulty selection</h2>
                 
                 <div className="difficulty-select">
-	                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged(0)}>
+	                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged('easy')}>
 	                    <h2>Easy</h2>
 	                    <ul>
-	                        {this.getTimerListItem(0)}
+	                        {this.getTimerListItem('easy')}
 	                        <li>Fewer Lethal Cards</li>
 	                        <li>No jokers</li>
 	                    </ul>
 	                </div>
 	                
-	                <div className="panel difficulty difficulty--normal" onClick={() => this.props.onSelectionChanged(1)}>
+	                <div className="panel difficulty difficulty--normal" onClick={() => this.props.onSelectionChanged('normal')}>
 	                    <h2>Normal</h2>
 	                    <ul>
-	                        {this.getTimerListItem(1)}
+	                        {this.getTimerListItem('normal')}
 	                        <li>Some Lethal Cards</li>
 	                    </ul>
 	                </div>
 	                
-	                <div className="panel difficulty difficulty--hard" onClick={() => this.props.onSelectionChanged(2)}>
+	                <div className="panel difficulty difficulty--hard" onClick={() => this.props.onSelectionChanged('hard')}>
 	                    <h2>Hard</h2>
 	                    <ul>
-	                        {this.getTimerListItem(2)}
+	                        {this.getTimerListItem('hard')}
 	                        <li>More Lethal Cards</li>
 	                    </ul>
 	                </div>
