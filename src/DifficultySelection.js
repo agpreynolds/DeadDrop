@@ -50,7 +50,7 @@ class DifficultySelection extends Component {
 	                </div>
 				</div>
 				
-                <button onClick={this.props.onBack}>Previous</button>
+                <button onClick={this.props.onPrevious}>Previous</button>
                 <button onClick={this.props.onNext}>Next</button>
             </div>
         );

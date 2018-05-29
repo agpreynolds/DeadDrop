@@ -77,7 +77,9 @@ class TimerSetup extends Component {
                     <Summary 
                         noOfPlayers={this.state.noOfPlayers}
                         difficulty={this.state.difficulty}
+                        timerLength={this.state.timerLength}
                         onPlayerSelectionChanged={this.handlePlayerSelectionChanged}
+                        onDifficultySelectionChanged={this.handleDifficultySelectionChanged}
                         onNext={this.handleNextButtonClicked} />
                 );
             case 3:

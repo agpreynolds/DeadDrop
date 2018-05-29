@@ -109,6 +109,10 @@ class Summary extends Component {
     handlePlayerSelectionChanged = (event) => {
         this.props.onPlayerSelectionChanged(parseInt(event.target.value));
     }
+
+    handleDifficultySelectionChanged = (event) => {
+        this.props.onDifficultySelectionChanged(event.target.value);
+    }
   
     render() {
         const playerOptions = [2,3,4,5].map((noOfPlayers) => <option value={noOfPlayers}>{noOfPlayers}</option>);
@@ -121,12 +125,26 @@ class Summary extends Component {
             <div>
                 <h2 className="page-title">Your Game</h2>
 
-                <label>Number of Players:</label>
-                <select value={this.props.noOfPlayers} onChange={this.handlePlayerSelectionChanged}>
-                    {playerOptions}
-                </select>
+                <div>
+                    <label>No Of Players:</label>
+                    <select value={this.props.noOfPlayers} onChange={this.handlePlayerSelectionChanged}>
+                        {playerOptions}
+                    </select>
+                </div>
                 
-                Difficulty: {this.props.difficulty}
+                <div>
+                    <label>Difficulty:</label>
+                    <select value={this.props.difficulty} onChange={this.handleDifficultySelectionChanged}>
+                        <option>easy</option>
+                        <option>normal</option>
+                        <option>hard</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label>Timer:</label>
+                    {this.props.timerLength} minutes
+                </div>
 
                 <hr/>
 
