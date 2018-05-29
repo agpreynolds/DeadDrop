@@ -2,10 +2,6 @@
 .difficulty-select{
 	margin-bottom: $text-spacing;
 
-	.selected {
-		background-color: green;
-	}
-
 	@include desktop-media {
 		display: grid;
 		grid-template-columns: repeat( 3, 1fr );
@@ -29,6 +25,18 @@
 		font-size: $small-font-size;
 		line-height: 1.4;
 		margin: 0;
+	}
+
+	&:before{
+		@extend .icon;
+		@extend .icon--grey-tick;
+		content: '';
+		display: block;
+		margin: 0 auto $text-spacing-half auto;
+	}
+
+	&.selected:before{
+		@extend .icon--red-tick;
 	}
 
 	@include desktop-media {
