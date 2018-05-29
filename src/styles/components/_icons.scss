@@ -9,6 +9,7 @@ $icon-large: 48px;
     height: $icon-normal;
     background-size: $icon-normal $icon-normal;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .icon--grey-tick{ background-image: url( ../assets/img/icon_grey-tick.svg ); }

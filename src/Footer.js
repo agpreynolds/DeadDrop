@@ -5,10 +5,10 @@ class Footer extends Component {
   render() {
     return (
         <footer className="site-footer">
-        		<hr />
-        		<div className="footer-content">
-        			<img className="logo" src={logo} alt="Dead Drop logo" />
-        		</div>
+    		<hr className="cross-divider" />
+    		<div className="footer-content">
+    			<img className="logo" src={logo} alt="Dead Drop logo" />
+    		</div>
         </footer>
     );
   }
