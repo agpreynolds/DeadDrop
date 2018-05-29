@@ -17,12 +17,14 @@ class DifficultySelection extends Component {
     }
     
     render() {
-        return (
+		const baseClass = 'panel difficulty'
+		
+		return (
             <div>
                 <h2 className="page-title">Difficulty selection</h2>
                 
                 <div className="difficulty-select">
-	                <div className="panel difficulty difficulty--easy" onClick={() => this.props.onSelectionChanged('easy')}>
+	                <div className={this.props.difficulty === 'easy' ? `${baseClass} selected` : baseClass} onClick={() => this.props.onSelectionChanged('easy')}>
 	                    <h2>Easy</h2>
 	                    <ul>
 	                        {this.getTimerListItem('easy')}
@@ -31,7 +33,7 @@ class DifficultySelection extends Component {
 	                    </ul>
 	                </div>
 	                
-	                <div className="panel difficulty difficulty--normal" onClick={() => this.props.onSelectionChanged('normal')}>
+	                <div className={this.props.difficulty === 'normal' ? `${baseClass} selected` : baseClass} onClick={() => this.props.onSelectionChanged('normal')}>
 	                    <h2>Normal</h2>
 	                    <ul>
 	                        {this.getTimerListItem('normal')}
@@ -39,7 +41,7 @@ class DifficultySelection extends Component {
 	                    </ul>
 	                </div>
 	                
-	                <div className="panel difficulty difficulty--hard" onClick={() => this.props.onSelectionChanged('hard')}>
+	                <div className={this.props.difficulty === 'hard' ? `${baseClass} selected` : baseClass} onClick={() => this.props.onSelectionChanged('hard')}>
 	                    <h2>Hard</h2>
 	                    <ul>
 	                        {this.getTimerListItem('hard')}

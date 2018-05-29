@@ -2,6 +2,10 @@
 .difficulty-select{
 	margin-bottom: $text-spacing;
 
+	.selected {
+		background-color: green;
+	}
+
 	@include desktop-media {
 		display: grid;
 		grid-template-columns: repeat( 3, 1fr );
