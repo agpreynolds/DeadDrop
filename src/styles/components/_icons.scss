@@ -33,3 +33,7 @@ $icon-large: 48px;
     height: $icon-large;
     background-size: $icon-large $icon-large;
 }
+
+.icon--rotate-90{ transform: rotate( 90deg ); }
+.icon--rotate-180{ transform: rotate( 180deg ); }
+.icon--rotate-270{ transform: rotate( 270deg ); }

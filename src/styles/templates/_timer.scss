@@ -1,3 +1,52 @@
+// Player select
+$player-select-arrow-size: 70px;
+
+.player-select{
+	margin-bottom: $text-spacing;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+
+	.players{
+		height: 70px;
+		width: 70px;
+		background: #fff;
+		text-align: center;
+		line-height: 64px;
+		font-family: $raleway-font-stack;
+		font-weight: $bold;
+		font-size: 4.2rem;
+		color: #000;
+		display: inline-block;
+		margin: 0 15px;
+		border-radius: $border-radius;
+		box-shadow: inset 0px 4px 7px 1px rgba( 0, 0, 0, 0.4 );
+	}
+
+	button{
+		display: inline-block;
+		background: transparent;
+		top: 0;
+		box-shadow: none;
+		border-radius: 0;
+		height: $player-select-arrow-size;
+		width: $player-select-arrow-size;
+		background-size: $player-select-arrow-size $player-select-arrow-size;
+		padding: 0;
+		margin: 0;
+
+		.icon{
+			height: $player-select-arrow-size;
+			width: $player-select-arrow-size;
+			background-size: $player-select-arrow-size $player-select-arrow-size;
+		}
+
+		&:disabled{
+			opacity: 0.3;
+		}
+	}
+}
+
 // Difficulty select
 .difficulty-select{
 	margin-bottom: $text-spacing;
