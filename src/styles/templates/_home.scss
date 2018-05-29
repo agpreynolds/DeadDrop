@@ -31,25 +31,29 @@
 	margin-left: -5%;
 }
 
-@include desktop-media {	
+@include desktop-media {
 	.intro-header{
 		top: 80px;
 	}
-	
+
 	.intro-header__subtitle{
 		font-size: 3.2rem;
 	}
-	
+
 	.intro-header__title{
 		font-size: 14rem;
-	}	
+	}
 }
 
 // Subscribe form
 .subscribe-form{
 	text-align: left;
-	
-	@include desktop-media {	
+
+	.input-group__button{
+		padding: 6px 15px 0px 15px;
+	}
+
+	@include desktop-media {
 		padding: 0 $desktop-column-padding;
 	}
 }
