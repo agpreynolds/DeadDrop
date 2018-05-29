@@ -49,9 +49,9 @@ class DifficultySelection extends Component {
 	                    </ul>
 	                </div>
 				</div>
-				
-                <button onClick={this.props.onPrevious}>Previous</button>
-                <button onClick={this.props.onNext}>Next</button>
+
+                <button onClick={this.props.onPrevious} className="button--inline">Previous</button>
+                <button onClick={this.props.onNext} className="button--inline">Next</button>
             </div>
         );
     }

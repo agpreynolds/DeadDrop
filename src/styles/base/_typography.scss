@@ -86,6 +86,10 @@ hr{
 	background: linear-gradient(to right, #000 0%, #fff 20%, #fff 80%, #000 100% );
 	overflow: visible;
 
+	&.cross-divider{
+		margin-bottom: $text-spacing-double;
+	}
+
 	&.cross-divider:after{
 		@extend .icon;
 		@extend .icon--red-cross;

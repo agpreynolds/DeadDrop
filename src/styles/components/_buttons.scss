@@ -17,9 +17,9 @@ input[type="submit"]{
 	text-align: center;
 	min-height: 45px;
 	cursor: pointer;
-	
+
 	&:focus{
-		box-shadow: 0 0 0 0 $red-dark;
+		box-shadow: none;
 		top: 5px;
 	}
 }
@@ -51,6 +51,11 @@ input[type="submit"].button--green{
 	background: $green;
 	box-shadow: 0 5px 0 0 $green-dark;
 	color: #000;
+
+	&:focus{
+		box-shadow: none;
+		top: 5px;
+	}
 }
 
 .button.button--orange,
@@ -60,6 +65,11 @@ input[type="button"].button--orange,
 input[type="submit"].button--orange{
 	background: $orange;
 	box-shadow: 0 5px 0 0 $orange-dark;
+
+	&:focus{
+		box-shadow: none;
+		top: 5px;
+	}
 }
 
 .button.button--white,
@@ -69,18 +79,27 @@ input[type="button"].button--white,
 input[type="submit"].button--white{
 	background: #fff;
 	box-shadow: 0 5px 0 0 $light-grey;
+
+	&:focus{
+		box-shadow: none;
+		top: 5px;
+	}
+}
+
+.button--inline+.button--inline{
+	margin-left: 10px;
 }
 
 // Input groups
 .input-group{
 	position: relative;
 	overflow: hidden;
-	
+
 	input[type="text"],
 	input[type="email"]{
 		padding-right: 72px;
 	}
-		
+
 	button,
 	.button{
 		position: absolute;
@@ -90,14 +109,14 @@ input[type="submit"].button--white{
 		box-shadow: none !important;
 		border-radius: 0 $border-radius $border-radius 0;
 		@include single-transition( background, 0.3s, ease-in-out, 0s );
-		cursor: pointer;		
-				
+		cursor: pointer;
+
 		&:hover,
 		&:focus{
 			top: 0;
 			background-color: #ddd;
-		}	
-		
+		}
+
 		&:before{
 			content: '';
 			position: absolute;

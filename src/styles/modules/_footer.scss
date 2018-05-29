@@ -1,8 +1,32 @@
 .site-footer{
 	margin-top: $text-spacing * 1.5;
+	margin-bottom: $text-spacing-double;
+}
+
+.footer-content{
+	margin: 0 auto;
+	position: relative;
+	width: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
 }
 
 .logo{
 	width: 100px;
 	height: auto;
+	margin-right: 50px;
+}
+
+.social{
+	display: inline;
+	margin-bottom: 0;
+	padding: 0 0 0 35px;
+	border-left: 1px solid $red;
+	display: flex;
+	align-items: center;
+
+	li+li{
+		margin-left: 15px;
+	}
 }
