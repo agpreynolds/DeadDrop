@@ -1,0 +1,34 @@
+$icon-small: 20px;
+$icon-normal: 34px;
+$icon-large: 48px;
+
+.icon{
+    display: inline-block;
+    vertical-align: baseline;
+    width: $icon-normal;
+    height: $icon-normal;
+    background-size: $icon-normal $icon-normal;
+    background-repeat: no-repeat;
+}
+
+.icon--grey-tick{ background-image: url( ../assets/img/icon_grey-tick.svg ); }
+.icon--red-tick{ background-image: url( ../assets/img/icon_red-tick.svg ); }
+.icon--red-arrow{ background-image: url( ../assets/img/icon_red-arrow.svg ); }
+.icon--red-pointer{ background-image: url( ../assets/img/icon_red-pointer.svg ); }
+.icon--red-cross{ background-image: url( ../assets/img/icon_red-cross.svg ); }
+.icon--white-email{ background-image: url( ../assets/img/icon_white-email.svg ); }
+.icon--white-pause{ background-image: url( ../assets/img/icon_white-pause.svg ); }
+.icon--white-twitter{ background-image: url( ../assets/img/icon_white-twitter.svg ); }
+
+// Modifiers
+.icon--small{
+    width: $icon-small;
+    height: $icon-small;
+    background-size: $icon-small $icon-small;
+}
+
+.icon--large{
+    width: $icon-large;
+    height: $icon-large;
+    background-size: $icon-large $icon-large;
+}
