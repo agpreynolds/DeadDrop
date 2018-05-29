@@ -3,3 +3,18 @@
 	padding: 20px;
 	margin: 0 auto;
 }
+
+.page-title{
+	font-size: 5.5rem;
+	margin: $text-spacing-double 0 $text-spacing 0;
+
+	&:before{
+		@extend hr;
+		display: block;
+		content: '';
+	}
+
+	@include mobile-media {
+		font-size: 4rem;
+	}
+}
