@@ -9,7 +9,7 @@ import GameLost from './GameLost';
 
 import { getTimerLength } from './logic/SetupRules';
 
-import { explosion } from './assets/audio/Explosion.mp3';
+import explosion from './assets/audio/Explosion.mp3';
 
 class TimerSetup extends Component {
     
