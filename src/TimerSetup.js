@@ -9,8 +9,12 @@ import GameLost from './GameLost';
 
 import { getTimerLength } from './logic/SetupRules';
 
+import { explosion } from './assets/audio/Explosion.mp3';
+
 class TimerSetup extends Component {
     
+    explosion = new Audio(explosion);
+
     constructor(props) {
         super(props);
         this.state = { 
@@ -40,7 +44,7 @@ class TimerSetup extends Component {
         this.setState({ activeStep: this.state.activeStep  + 1 });
     }
 
-    handlePlayAgainClicked = () => {
+    handlePlayAgainClicked = () => {        
         this.setState({ activeStep: 0 });
     }
 
@@ -49,6 +53,7 @@ class TimerSetup extends Component {
     }
     
     handleGameLost = () => {
+        this.explosion.play();
         this.setState({ activeStep: 5 });
     }
 

@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 
+import beep from './assets/audio/Beep.wav';
+
 class Timer extends Component {
     
+    beep = new Audio(beep);
+
     constructor(props) {
         super(props);
         this.timer = 0;
@@ -10,6 +14,10 @@ class Timer extends Component {
     
     componentDidMount() {
         this.startTimer();
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.timer);
     }
 
     secondsToTime(secs){
@@ -45,12 +53,22 @@ class Timer extends Component {
             time: this.secondsToTime(seconds),
             seconds: seconds,
         });
+
+        if (this.shouldBeep(seconds)) {
+            this.beep.play();
+        }        
         
         // Check if we're at zero.
         if (seconds === 0) { 
             clearInterval(this.timer);
             this.props.onGameLost();
         }
+    }
+
+    shouldBeep(seconds) {
+        return seconds < 10 || // Every second for last 10 seconds
+            (seconds < 60 && seconds % 10 === 0) || //Every 10 seconds under a minute
+            (seconds % 60 === 0) // Every minute
     }
 
     render() {
