@@ -65,9 +65,9 @@ $player-select-arrow-size: 70px;
 	margin-bottom: 15px;
 
 	h2{
-		font-size: 3.6rem;
+		font-size: 3.2rem;
 		font-weight: $bold;
-		margin-bottom: 12px;
+		margin-bottom: 8px;
 	}
 
 	ul{
@@ -81,7 +81,7 @@ $player-select-arrow-size: 70px;
 		@extend .icon--grey-tick;
 		content: '';
 		display: block;
-		margin: 0 auto $text-spacing-half auto;
+		margin: 0 auto 8px auto;
 	}
 
 	&.selected:before{
@@ -94,6 +94,10 @@ $player-select-arrow-size: 70px;
 		&:hover,
 		&.selected{
 			top: -10px;
+		}
+
+		&:before{
+			margin: 0 auto $text-spacing-half auto;
 		}
 
 		h2{

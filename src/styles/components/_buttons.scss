@@ -113,7 +113,7 @@ input[type="submit"].button--white{
 
 		&:hover,
 		&:focus{
-			top: 0;
+			top: 0 !important;
 			background-color: #ddd;
 		}
 

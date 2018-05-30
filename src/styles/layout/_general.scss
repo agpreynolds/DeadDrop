@@ -1,12 +1,15 @@
 #root{
 	max-width: 670px;
-	padding: 20px;
+	padding: 60px 20px 20px 20px;
 	margin: 0 auto;
+
+	@include mobile-media {
+		padding-top: $text-spacing;
+	}
 }
 
 .page-title{
 	font-size: 5.5rem;
-	margin: $text-spacing-double 0 $text-spacing 0;
 
 	&:before{
 		@extend hr;
@@ -16,5 +19,9 @@
 
 	@include mobile-media {
 		font-size: 4rem;
+
+		&:before{
+			margin-top: 0;
+		}
 	}
 }
