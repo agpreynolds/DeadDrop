@@ -11,7 +11,7 @@ input{
 	width: 100%;
 	padding: 10px 16px;
 	margin-bottom: $text-spacing-half;
-	
+
 	&:focus{
 		outline: none;
 	}
@@ -45,6 +45,7 @@ select{
 	font-weight: $bold;
 	margin-bottom: $text-spacing-half;
 	border-radius: $border-radius;
+	background: #fff;
 	cursor: pointer;
 
 	&:focus{
