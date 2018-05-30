@@ -35,3 +35,55 @@ input[type="radio"]{
 input[type="number"]{
 	text-align: center;
 }
+
+select{
+	min-width: 100%;
+	max-width: 100%;
+	font-family: $raleway-font-stack;
+	font-size: 2.1rem;
+	height: 46px;
+	font-weight: $bold;
+	margin-bottom: $text-spacing-half;
+	border-radius: $border-radius;
+	cursor: pointer;
+
+	&:focus{
+		outline: none;
+	}
+
+	@include desktop-media {
+		min-width: 60%;
+	}
+}
+
+.select-wrapper{
+	position: relative;
+	width: 100%;
+	cursor: pointer;
+
+	@include desktop-media {
+		width: 60%;
+	}
+
+	&:after{
+		@extend .icon;
+		@extend .icon--small;
+		@extend .icon--red-pointer;
+		content: '';
+		position: absolute;
+		top: 14px;
+	    right: 15px;
+		pointer-events: none;
+		cursor: pointer;
+	}
+
+	select{
+		width: 100%;
+		height: auto;
+		padding: 10px 16px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
+
+}

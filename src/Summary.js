@@ -125,25 +125,35 @@ class Summary extends Component {
             <div>
                 <h2 className="page-title">Your Game</h2>
 
-                <div>
+                <div className="summary-setting">
                     <label>No Of Players:</label>
-                    <select value={this.props.noOfPlayers} onChange={this.handlePlayerSelectionChanged}>
-                        {playerOptions}
-                    </select>
+                    <div className="summary-setting__value">
+                        <div className="select-wrapper">
+                            <select value={this.props.noOfPlayers} onChange={this.handlePlayerSelectionChanged}>
+                                {playerOptions}
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
+                <div className="summary-setting">
                     <label>Difficulty:</label>
-                    <select value={this.props.difficulty} onChange={this.handleDifficultySelectionChanged}>
-                        <option>easy</option>
-                        <option>normal</option>
-                        <option>hard</option>
-                    </select>
+                    <div className="summary-setting__value">
+                        <div className="select-wrapper">
+                            <select value={this.props.difficulty} onChange={this.handleDifficultySelectionChanged}>
+                                <option>easy</option>
+                                <option>normal</option>
+                                <option>hard</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
 
-                <div>
+                <div className="summary-setting">
                     <label>Timer:</label>
-                    {this.props.timerLength} minutes
+                    <div className="summary-setting__value">
+                        {this.props.timerLength} minutes
+                    </div>
                 </div>
 
                 <hr/>

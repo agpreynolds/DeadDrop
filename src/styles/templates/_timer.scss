@@ -112,6 +112,36 @@ $player-select-arrow-size: 70px;
 	}
 }
 
+// Summary
+.summary-setting{
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	grid-column-gap: 20px;
+	margin-bottom: $text-spacing-half;
+
+	> *{
+		align-self: center;
+	}
+
+	select{
+		margin: 0;
+	}
+
+	label{
+		text-align: right;
+	}
+
+	.summary-setting__value{
+		text-align: left;
+		font-family: $raleway-font-stack;
+		font-weight: $bold;
+	}
+
+	@include desktop-media {
+		grid-template-columns: 1fr 2fr;
+	}
+}
+
 // Timer
 .timer-countdown{
 	margin-top: 175px;
