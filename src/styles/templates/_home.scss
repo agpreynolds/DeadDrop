@@ -1,7 +1,11 @@
 // Intro
 .intro{
 	position: relative;
-	top: -20px;
+	top: -60px;
+
+	@include mobile-media {
+		top: -$text-spacing;
+	}
 }
 
 .intro-header{
