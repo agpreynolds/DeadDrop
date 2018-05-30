@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 
 const resources = {
-    p1: (noOfCyanideCards, noOfMisinformationCards, dealExtra) => {        
+    p1: (noOfCyanideCards, noOfMisinformationCards, dealExtra) => {
         const dealExtraTxt = dealExtra ? ' and 3 cards between both of you' : '';
-        return `Grab the hidden cards and select The Nuke, The Nuclear Codes, ${noOfCyanideCards}x Cyanide cards and ${noOfMisinformationCards}x Misinformation cards. Place 3 cards face-down in front of each player${dealExtraTxt}.`;
+        return `Grab the hidden cards and select The Nuke, The Nuclear Codes, ${noOfCyanideCards}× Cyanide cards and ${noOfMisinformationCards}× Misinformation cards. Place 3 cards face-down in front of each player${dealExtraTxt}.`;
     },
-    p2Shuffle: 'Shuffle the playing deck and deal 5x cards each',
-    p2Grab: 'Grab the playing deck, shuffle it and deal 5x cards each',
+    p2Shuffle: 'Shuffle the playing deck and deal 5× cards each',
+    p2Grab: 'Grab the playing deck, shuffle it and deal 5× cards each',
     p2Grab_RemoveJokers: 'Grab the playing deck and remove the Kill Everyone and Nuclear Threat Jokers.',
-    p2Grab_RemoveJokers_AndRemoveExplosions: 'Grab the playing deck and remove 2x Explosion! cards and the Kill Everyone and Nuclear Threat jokers.',
-    p2Grab_RemoveJokers_AndRemoveExplosions_AndRemoveDisarms: 'Grab the playing deck and remove 4x Explosion! cards, 4x Disarm cards and the Kill Everyone and Nuclear Threat jokers.',
-    p3WhenReady: 'When you\'re ready hit the button!',
+    p2Grab_RemoveJokers_AndRemoveExplosions: 'Grab the playing deck and remove 2× Explosion! cards and the Kill Everyone and Nuclear Threat jokers.',
+    p2Grab_RemoveJokers_AndRemoveExplosions_AndRemoveDisarms: 'Grab the playing deck and remove 4× Explosion! cards, 4× Disarm cards and the Kill Everyone and Nuclear Threat jokers.',
+    p3WhenReady: 'When you’re ready hit the button!',
     p3DeepBreath: 'Take a deep breath and hit the button',
     p3Wipe: 'Wipe away a single tear and hit the button.',
     p3Think: 'Think about your life decisions and hit the button.',
@@ -113,12 +113,12 @@ class Summary extends Component {
     handleDifficultySelectionChanged = (event) => {
         this.props.onDifficultySelectionChanged(event.target.value);
     }
-  
+
     render() {
         const playerOptions = [2,3,4,5].map((noOfPlayers) => <option value={noOfPlayers}>{noOfPlayers}</option>);
 
-        const configuration = setupCriteria.find(c => 
-            c.noOfPlayers === this.props.noOfPlayers && 
+        const configuration = setupCriteria.find(c =>
+            c.noOfPlayers === this.props.noOfPlayers &&
             c.difficulty === this.props.difficulty);
 
         return (
@@ -131,7 +131,7 @@ class Summary extends Component {
                         {playerOptions}
                     </select>
                 </div>
-                
+
                 <div>
                     <label>Difficulty:</label>
                     <select value={this.props.difficulty} onChange={this.handleDifficultySelectionChanged}>
@@ -140,7 +140,7 @@ class Summary extends Component {
                         <option>hard</option>
                     </select>
                 </div>
-                
+
                 <div>
                     <label>Timer:</label>
                     {this.props.timerLength} minutes
@@ -151,7 +151,9 @@ class Summary extends Component {
                 <h2>To Set Up</h2>
 
                 <p>{configuration.paragraph1}</p>
+                <hr className="small" />
                 <p>{configuration.paragraph2}</p>
+                <hr className="small" />
                 <p>{configuration.paragraph3}</p>
 
                 <button onClick={this.props.onNext}>Play</button>
