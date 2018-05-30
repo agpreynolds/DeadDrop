@@ -8,7 +8,9 @@ class GameLost extends Component {
         <div>
             <h2 className="page-title">Congratulations!</h2>
             <p>You won! Do you think you can keep the victories coming?</p>
-            <button onClick={this.props.onPlayAgainClicked}>Play Again</button>
+            <button onClick={this.props.onPlayAgainClicked} className="button--cta">Play Again</button>
+
+            <hr />
 
             <TwitterShare
               title="Tweet your victory!"

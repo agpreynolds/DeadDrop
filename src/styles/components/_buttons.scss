@@ -43,6 +43,15 @@ input[type="submit"].button--large{
 	min-height: 75px;
 }
 
+.button.button--cta,
+a.button.button--cta,
+button.button--cta,
+input[type="button"].button--cta,
+input[type="submit"].button--cta{
+	font-size: 4rem;
+	padding: 5px 60px;
+}
+
 .button.button--green,
 a.button.button--green,
 button.button--green,

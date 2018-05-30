@@ -166,7 +166,7 @@ class Summary extends Component {
                 <hr className="small" />
                 <p>{configuration.paragraph3}</p>
 
-                <button onClick={this.props.onNext}>Play</button>
+                <button onClick={this.props.onNext} className="button--cta">Play!</button>
             </div>
         );
     }
