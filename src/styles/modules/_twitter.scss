@@ -1,7 +1,8 @@
 .twitter-content {
     background-color: #fff;
     color: #000;
-    padding:10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: $text-spacing;
+    border-radius: $border-radius;
+    line-height: 1.4;
 }
