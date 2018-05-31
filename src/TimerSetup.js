@@ -9,11 +9,7 @@ import GameLost from './GameLost';
 
 import { getTimerLength } from './logic/SetupRules';
 
-import explosion from './assets/audio/Explosion.mp3';
-
 class TimerSetup extends Component {
-    
-    explosion = new Audio(explosion);
 
     constructor(props) {
         super(props);
@@ -21,7 +17,7 @@ class TimerSetup extends Component {
             activeStep: 0,
             noOfPlayers: 2,
             difficulty: 'normal',
-            timerLength: 10 //TODO[AR]: What's the default here?
+            timerLength: getTimerLength(2, 'normal')
         };
     }
 
@@ -52,8 +48,7 @@ class TimerSetup extends Component {
         this.setState({ activeStep: 4 });
     }
     
-    handleGameLost = () => {
-        this.explosion.play();
+    handleGameLost = () => {        
         this.setState({ activeStep: 5 });
     }
 

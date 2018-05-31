@@ -1,4 +1,5 @@
 export function getTimerLength(difficulty, noOfPlayers) {
+    return 1;
     if (difficulty === 'hard') {
         return noOfPlayers * 4;
     } else if (difficulty === 'normal') {

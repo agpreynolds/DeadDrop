@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 
 import beep from './assets/audio/Beep.wav';
+import explosion from './assets/audio/Explosion.mp3';
 
 class Timer extends Component {
     
     beep = new Audio(beep);
+    explosion = new Audio(explosion);
 
     constructor(props) {
         super(props);
@@ -60,9 +62,13 @@ class Timer extends Component {
         
         // Check if we're at zero.
         if (seconds === 0) { 
-            clearInterval(this.timer);
-            this.props.onGameLost();
+            this.handleGameLost();            
         }
+    }
+
+    handleGameLost = () => {
+        this.explosion.play();
+        this.props.onGameLost();
     }
 
     shouldBeep(seconds) {
@@ -81,7 +87,7 @@ class Timer extends Component {
             		</p>
 	            <ul className="timer-controls">
 	            		<li className="timer-control timer-control--explode">
-	            			<button className="button" onClick={this.props.onGameLost}>Explode</button>
+	            			<button className="button" onClick={this.handleGameLost}>Explode</button>
 	            		</li>
 	            		<li className="timer-control timer-control--delay">
 	            			<button className="button button--orange" aria-label="Delay"></button>
