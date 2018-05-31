@@ -1,11 +1,12 @@
-// Import Google Fonts
+// Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:500|Raleway:400,700|Yanone+Kaffeesatz:400,700');
+@include font-face( 'Digital', '../assets/fonts/digital', 'normal', 'normal', woff2 woff );
 
 // Typographic variables
 $base-font-stack: Times, TimesNewRoman, "Times New Roman", Georgia, serif;
 $raleway-font-stack: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $yanone-font-stack: "Yanone Kaffeesatz", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$countdown-font-stack: "Roboto Mono", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$countdown-font-stack: "Digital", "Roboto Mono", "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $base-font-size: 2.2rem;
 $base-font-size-mobile: 1.9rem;
