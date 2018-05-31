@@ -107,7 +107,7 @@ const setupCriteria = [
 class Summary extends Component {
 
     handlePlayerSelectionChanged = (event) => {
-        this.props.onPlayerSelectionChanged(parseInt(event.target.value));
+        this.props.onPlayerSelectionChanged(parseInt(event.target.value, 10));
     }
 
     handleDifficultySelectionChanged = (event) => {
