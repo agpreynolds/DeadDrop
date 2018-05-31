@@ -14,8 +14,7 @@ class GameLost extends Component {
 
             <TwitterShare
               title="Tweet your failure!"
-              content="I just lost playing @DeadDropTheGame !
-              It's ok though, so did everyone else #gameprototype #deaddropthegame"
+              content="I just lost playing @DeadDropTheGame ! It's ok though, so did everyone else #gameprototype #deaddropthegame"
               />
         </div>
     );
