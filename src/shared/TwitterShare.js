@@ -10,7 +10,7 @@ class TwitterShare extends Component {
             <div>
                 <h3>{this.props.title}</h3>
                 <div className='twitter-content'>{this.props.content}</div>
-                <a href={encodedUrl}>Tweet it</a>
+                <a className="button" href={encodedUrl}>Tweet it</a>
             </div>
         );
     }
