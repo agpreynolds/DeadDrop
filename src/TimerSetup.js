@@ -17,12 +17,15 @@ class TimerSetup extends Component {
             activeStep: 0,
             noOfPlayers: 2,
             difficulty: 'normal',
-            timerLength: getTimerLength(2, 'normal')
+            timerLength: getTimerLength('normal', 2)
         };
     }
 
     handlePlayerSelectionChanged = (noOfPlayers) => {
-        this.setState({ noOfPlayers: noOfPlayers });
+        this.setState({ 
+            noOfPlayers: noOfPlayers,
+            timerLength: getTimerLength(this.state.difficulty, noOfPlayers)
+        });
     }
 
     handleDifficultySelectionChanged = (difficulty) => {

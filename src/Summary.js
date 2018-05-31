@@ -115,7 +115,8 @@ class Summary extends Component {
     }
 
     render() {
-        const playerOptions = [2,3,4,5].map((noOfPlayers) => <option value={noOfPlayers}>{noOfPlayers}</option>);
+        const playerOptions = [2,3,4,5].map((noOfPlayers) => 
+            <option key={noOfPlayers} value={noOfPlayers}>{noOfPlayers}</option>);
 
         const configuration = setupCriteria.find(c =>
             c.noOfPlayers === this.props.noOfPlayers &&
