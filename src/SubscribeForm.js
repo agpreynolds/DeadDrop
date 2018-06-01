@@ -8,18 +8,10 @@ class SubscribeForm extends Component {
 
 			<hr />
 
-	        <form className="subscribe-form">
-	        	<label htmlFor="email">Email address:</label><br />
-
-		        <div className="input-group input-group--email">
-		        	<input type="email" name="email" />
-					<button type="submit" value="submit" aria-label="Submit" className="button button--white input-group__button">
-                        <i className="icon icon--red-arrow"></i>
-                    </button>
-				</div>
-
-				<p className="update-info sans small">Updates are every 4–6 weeks and will cover the processes of development, funding and manufacture for this game!</p>
-	        </form>
+            <p className="update-info sans small">
+                <a href="https://mailchi.mp/af76b8c9e794/dead-drop-the-game" className="button" target="_blank" rel="noopener noreferrer">Sign up for updates</a><br />
+                Updates are every 4–6 weeks and will cover the processes of development, funding and manufacture for this game!
+            </p>
 	    </div>
     );
   }
