@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import beep from './assets/audio/Beep.wav';
+import beep from './assets/audio/Beep.mp3';
 import explosion from './assets/audio/Explosion.mp3';
 
 class Timer extends Component {
