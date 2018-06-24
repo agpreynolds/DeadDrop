@@ -44,7 +44,8 @@ class Timer extends Component {
                 s: '--'
             }});
         } else if (this.timer === 0) {
-           this.timer = setInterval(this.countDown, 1000);
+            this.beep.play();
+            this.timer = setInterval(this.countDown, 1000);
         }
     }
 
